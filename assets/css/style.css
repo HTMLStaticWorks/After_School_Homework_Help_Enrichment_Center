@@ -870,7 +870,17 @@ html[data-theme="dark"] .logo-icon {
   animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
 }
 
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
 .hero-btns-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
   gap: 20px;
   margin-bottom: 56px;
@@ -1800,8 +1810,11 @@ html[data-theme="dark"] .back-to-top {
   }
 
   .hero-btns {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
   }
 
   .hero-btns .btn {
