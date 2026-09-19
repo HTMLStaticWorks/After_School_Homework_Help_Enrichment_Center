@@ -1130,6 +1130,14 @@ html[data-theme="dark"] .logo-icon {
   border: 1px solid var(--border-color);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+}
+
+.card > .btn,
+.card > button.btn,
+.card > a.btn {
+  margin-top: auto;
 }
 
 .card:hover {
