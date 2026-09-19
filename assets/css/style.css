@@ -245,6 +245,30 @@ html[data-theme="dark"] .btn-secondary:hover {
   transform: translateY(-2px);
 }
 
+html[data-theme="dark"] .btn-navy {
+  background-color: var(--coral-500);
+  color: #FFFFFF;
+}
+
+html[data-theme="dark"] .btn-navy:hover {
+  background-color: var(--coral-600);
+  color: #FFFFFF;
+}
+
+/* Parent Preview Inner Card Box Styling */
+.parent-preview-inner-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+html[data-theme="dark"] .parent-preview-inner-box {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
 /* ==========================================================================
    PUBLIC NAVBAR & HEADER — FIXED TOP ON SCROLL
    ========================================================================== */
