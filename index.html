@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightPath | After-School Homework Help & Enrichment</title>
+  <meta name="description" content="BrightPath provides structured after-school homework help, 1-on-1 subject tutoring, enrichment programs, and parent progress tracking for students K-12." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Sticky Global Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="m9 10 2 2 4-4"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">BRIGHTPATH</span>
+          <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="tutors.html" class="nav-link">Tutors</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="control-pill">
+          <button type="button" class="icon-circle-btn js-theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button type="button" class="icon-circle-btn js-rtl-toggle" aria-label="Toggle Direction" title="Toggle LTR/RTL Layout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </button>
+          <a href="dashboard.html" class="icon-circle-btn" aria-label="Parent Portal Dashboard" title="Parent Portal Dashboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          </a>
+        </div>
+        <a href="login.html" class="btn btn-primary" id="navPortalCta">Parent Portal →</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Navigation Menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Off-Canvas Drawer Navigation -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+          <span class="logo-name">BRIGHTPATH</span>
+        </div>
+        <button class="drawer-close" id="drawerClose" aria-label="Close Navigation Menu">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home 1</a></li>
+        <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="programs.html" class="drawer-link">Programs</a></li>
+        <li><a href="tutors.html" class="drawer-link">Tutors</a></li>
+        <li><a href="pricing.html" class="drawer-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+      <div class="drawer-controls">
+        <div class="control-pill">
+          <button type="button" class="icon-circle-btn js-theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button type="button" class="icon-circle-btn js-rtl-toggle" aria-label="Toggle Direction" title="Toggle LTR/RTL Layout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </button>
+          <a href="dashboard.html" class="icon-circle-btn" aria-label="Parent Portal Dashboard" title="Parent Portal Dashboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          </a>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">Parent Portal →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HOME SECTION 01 — FULLSCREEN HERO -->
+    <section class="hero-fullscreen" id="heroSection">
+      <div class="hero-bg-overlay"></div>
+      <div class="container hero-centered-content">
+        <span class="section-tag hero-tag-dark">Structured After-School Academic Support</span>
+        <h1 class="hero-fullscreen-title">Homework Help That Builds Confidence & Independence.</h1>
+        <p class="hero-fullscreen-lead">Structured after-school support helping K–12 students master daily work, build study habits, and discover academic confidence.</p>
+        <div class="hero-btns hero-btns-center">
+          <a href="programs.html" class="btn btn-primary">Explore Programs →</a>
+          <a href="tutors.html" class="btn btn-secondary-light">Meet Our Tutors</a>
+        </div>
+        <div class="hero-stats-row">
+          <div class="hero-stat-card">
+            <span class="stat-number">94%</span>
+            <span class="stat-label">Parent Satisfaction</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number">1 : 4</span>
+            <span class="stat-label">Small Group Ratio</span>
+          </div>
+          <div class="hero-stat-card">
+            <span class="stat-number">K–12</span>
+            <span class="stat-label">All Grade Levels</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 02 — THE LEARNING SUPPORT STORY -->
+    <section class="section section-dark" id="storySection">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div class="hero-image-frame">
+            <img src="assets/images/2.png" alt="Student engaged in focused after-school study session" />
+          </div>
+          <div>
+            <span class="section-tag">Our Academic Philosophy</span>
+            <h2 class="section-title">More Than Homework Help.</h2>
+            <p class="section-subtitle" style="margin-bottom:24px;">We believe after-school hours are an opportunity to transform school stress into independent learning confidence.</p>
+            <div style="display:flex; flex-direction:column; gap:20px;">
+              <div style="display:flex; gap:16px;">
+                <div style="width:40px; height:40px; background:rgba(229,107,93,0.2); color:var(--coral-500); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">01</div>
+                <div>
+                  <h4 style="font-size:1.15rem; font-family:var(--font-heading); margin-bottom:4px;">Guided Homework Assistance</h4>
+                  <p style="color:var(--slate-400); font-size:0.95rem;">Daily structured support ensures students complete assignments correctly without late-night family frustration.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:16px;">
+                <div style="width:40px; height:40px; background:rgba(229,107,93,0.2); color:var(--coral-500); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">02</div>
+                <div>
+                  <h4 style="font-size:1.15rem; font-family:var(--font-heading); margin-bottom:4px;">Targeted Concept Tutoring</h4>
+                  <p style="color:var(--slate-400); font-size:0.95rem;">Focusing on core subject gaps in Math, Reading, Writing, and Science with tailored instruction.</p>
+                </div>
+              </div>
+              <div style="display:flex; gap:16px;">
+                <div style="width:40px; height:40px; background:rgba(229,107,93,0.2); color:var(--coral-500); border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold; flex-shrink:0;">03</div>
+                <div>
+                  <h4 style="font-size:1.15rem; font-family:var(--font-heading); margin-bottom:4px;">Transparent Parent Portal</h4>
+                  <p style="color:var(--slate-400); font-size:0.95rem;">Weekly tutor notes, attendance logs, and assignment completion metrics available on your parent dashboard.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 03 — PROGRAM PATHWAYS -->
+    <section class="section" id="pathwaysSection">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Interactive Academic Pathways</span>
+          <h2 class="section-title">Support Tailored To Your Child's Grade</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">Select your student's grade group to see personalized support pathways and session formats.</p>
+        </div>
+
+        <div class="filter-tabs">
+          <button class="tab-btn js-pathway-tab active" data-category="all">All Grades</button>
+          <button class="tab-btn js-pathway-tab" data-category="elementary">Elementary (K-5)</button>
+          <button class="tab-btn js-pathway-tab" data-category="middle">Middle School (6-8)</button>
+          <button class="tab-btn js-pathway-tab" data-category="high">High School (9-12)</button>
+        </div>
+
+        <div class="grid-3">
+          <div class="card js-pathway-card" data-category="elementary">
+            <div class="card-icon">📘</div>
+            <span style="font-size:0.75rem; font-weight:700; color:var(--coral-500); text-transform:uppercase;">Elementary Focus</span>
+            <h3 class="card-title">Foundational Reading & Math</h3>
+            <p class="card-desc">Building reading fluency, core arithmetic, basic writing, and positive homework routines for young learners.</p>
+            <button class="btn btn-secondary js-book-trigger" data-session="Elementary Pathway" style="margin-top:20px; width:100%;">Explore Pathway →</button>
+          </div>
+
+          <div class="card js-pathway-card" data-category="middle">
+            <div class="card-icon">📐</div>
+            <span style="font-size:0.75rem; font-weight:700; color:var(--coral-500); text-transform:uppercase;">Middle School Focus</span>
+            <h3 class="card-title">Pre-Algebra & Essay Skills</h3>
+            <p class="card-desc">Mastering fractions, ratios, structured writing, science concepts, and independent time-management habits.</p>
+            <button class="btn btn-secondary js-book-trigger" data-session="Middle School Pathway" style="margin-top:20px; width:100%;">Explore Pathway →</button>
+          </div>
+
+          <div class="card js-pathway-card" data-category="high">
+            <div class="card-icon">🔬</div>
+            <span style="font-size:0.75rem; font-weight:700; color:var(--coral-500); text-transform:uppercase;">High School Focus</span>
+            <h3 class="card-title">Advanced Subjects & Test Prep</h3>
+            <p class="card-desc">Algebra, Geometry, Physics, AP Essay Prep, study strategies, and exam preparation with subject experts.</p>
+            <button class="btn btn-secondary js-book-trigger" data-session="High School Pathway" style="margin-top:20px; width:100%;">Explore Pathway →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 04 — HOW SUPPORT WORKS -->
+    <section class="section" style="background: var(--bg-secondary);" id="howItWorksSection">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag">Proven 5-Step Process</span>
+          <h2 class="section-title">How Our After-School Learning Works</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">A structured routine designed to build understanding step-by-step.</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-number">1</div>
+            <div class="timeline-content">
+              <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:6px;">01 — Academic Assessment</h3>
+              <p style="color:var(--text-muted);">We evaluate your child's current school assignments, teacher feedback, and learning style to identify focus areas.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">2</div>
+            <div class="timeline-content">
+              <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:6px;">02 — Custom Learning Plan</h3>
+              <p style="color:var(--text-muted);">Creating a tailored after-school schedule combining daily homework help with target subject tutoring.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">3</div>
+            <div class="timeline-content">
+              <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:6px;">03 — Guided Daily Sessions</h3>
+              <p style="color:var(--text-muted);">Small group and 1-on-1 tutoring sessions in a calm, encouraging environment led by dedicated tutors.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">4</div>
+            <div class="timeline-content">
+              <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:6px;">04 — Practice & Skill Mastery</h3>
+              <p style="color:var(--text-muted);">Interactive problem-solving exercises and enrichment labs that reinforce school curriculum.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-number">5</div>
+            <div class="timeline-content">
+              <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:6px;">05 — Parent Progress Updates</h3>
+              <p style="color:var(--text-muted);">Detailed session notes and progress metrics updated directly on your parent portal dashboard.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 04B — UNIQUE INTERACTIVE ROUTINE & IMPACT SIMULATOR -->
+    <section class="section" id="routineSimulatorSection">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <span class="section-tag hero-tag-dark">Interactive Routine Explorer</span>
+          <h2 class="section-title">Design Your Child's Ideal After-School Afternoon.</h2>
+          <p class="section-subtitle" style="margin-inline: auto;">Select your student's grade level to preview their structured daily schedule and weekly stress reduction.</p>
+        </div>
+
+        <!-- Grade Selector Tabs -->
+        <div class="simulator-tabs" id="routineTabs">
+          <button class="sim-tab-btn active" data-grade="elementary">
+            <span class="tab-badge">K – 5</span>
+            <span class="tab-title">Elementary School</span>
+          </button>
+          <button class="sim-tab-btn" data-grade="middle">
+            <span class="tab-badge">6 – 8</span>
+            <span class="tab-title">Middle School</span>
+          </button>
+          <button class="sim-tab-btn" data-grade="high">
+            <span class="tab-badge">9 – 12</span>
+            <span class="tab-title">High School Prep</span>
+          </button>
+        </div>
+
+        <div class="simulator-body-grid">
+          <!-- Live Timeline Schedule Column -->
+          <div class="sim-card sim-timeline-card">
+            <div class="sim-card-header">
+              <span class="sim-badge" id="simGradeBadge">Elementary Focus (K–5)</span>
+              <h3 class="sim-card-title" id="simTitle">Daily 3-Hour After-School Flow</h3>
+            </div>
+            
+            <div class="sim-steps-list" id="simStepsList">
+              <div class="sim-step-item">
+                <div class="sim-step-time">3:30 PM</div>
+                <div class="sim-step-dot"></div>
+                <div class="sim-step-info">
+                  <h4>Arrival & Healthy Snack Break</h4>
+                  <p>Students unwind, grab a nutritious snack, and reset after the school bell.</p>
+                </div>
+              </div>
+              <div class="sim-step-item active-step">
+                <div class="sim-step-time">4:00 PM</div>
+                <div class="sim-step-dot"></div>
+                <div class="sim-step-info">
+                  <h4>Focused Homework Completion</h4>
+                  <p>Guided assistance on daily school assignments with 1:4 tutor guidance.</p>
+                </div>
+              </div>
+              <div class="sim-step-item">
+                <div class="sim-step-time">5:00 PM</div>
+                <div class="sim-step-dot"></div>
+                <div class="sim-step-info">
+                  <h4>Foundational Math & Reading Lab</h4>
+                  <p>Fun, interactive skill-building exercises reinforcing core grade concepts.</p>
+                </div>
+              </div>
+              <div class="sim-step-item">
+                <div class="sim-step-time">5:45 PM</div>
+                <div class="sim-step-dot"></div>
+                <div class="sim-step-info">
+                  <h4>Pack Up & Parent Portal Sync</h4>
+                  <p>Tutor logs completed work; student leaves with 100% finished homework.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Impact Metrics & Outcome Column -->
+          <div class="sim-card sim-impact-card">
+            <div class="sim-card-header">
+              <span class="sim-badge sim-badge-accent">Estimated Parent & Student Impact</span>
+              <h3 class="sim-card-title">Weekly After-School Benefits</h3>
+            </div>
+
+            <div class="sim-metrics-grid">
+              <div class="sim-metric-box">
+                <div class="sim-metric-val" id="metricTime">5.5 Hours</div>
+                <div class="sim-metric-lbl">Evening Stress Saved / Wk</div>
+              </div>
+              <div class="sim-metric-box">
+                <div class="sim-metric-val" id="metricScore">+34%</div>
+                <div class="sim-metric-lbl">Assignment Mastery Index</div>
+              </div>
+              <div class="sim-metric-box">
+                <div class="sim-metric-val" id="metricRatio">1 : 4</div>
+                <div class="sim-metric-lbl">Student-Tutor Ratio</div>
+              </div>
+              <div class="sim-metric-box">
+                <div class="sim-metric-val" id="metricCheck">100%</div>
+                <div class="sim-metric-lbl">Finished Before Dinner</div>
+              </div>
+            </div>
+
+            <div class="sim-highlight-box" id="simHighlightText">
+              "Elementary students build independent study habits early, eliminating night-time homework tears and giving families peaceful evenings."
+            </div>
+
+            <button class="btn btn-primary js-book-trigger" style="width:100%; justify-content:center; margin-top:20px;" data-session="Custom After-School Schedule Consultation">
+              Build Your Child's Schedule →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 05 — PARENT VISIBILITY -->
+    <section class="section" id="parentVisibilitySection">
+      <div class="container">
+        <div class="grid-2" style="align-items: center;">
+          <div>
+            <span class="section-tag">Parent Portal Experience</span>
+            <h2 class="section-title">Stay Connected to Your Child's Progress.</h2>
+            <p class="section-subtitle" style="margin-bottom:24px;">No more guessing how homework went. Access tutor notes, assignment completion stats, attendance records, and session schedules anytime.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:12px; margin-bottom:32px;">
+              <li style="display:flex; align-items:center; gap:10px; font-weight:600;"><span style="color:var(--coral-500);">✓</span> Real-time homework completion tracking</li>
+              <li style="display:flex; align-items:center; gap:10px; font-weight:600;"><span style="color:var(--coral-500);">✓</span> Direct weekly notes from assigned subject tutors</li>
+              <li style="display:flex; align-items:center; gap:10px; font-weight:600;"><span style="color:var(--coral-500);">✓</span> Monthly attendance & reschedule management</li>
+            </ul>
+            <a href="dashboard.html" class="btn btn-navy">Explore Parent Portal Demo →</a>
+          </div>
+
+          <!-- Parent Dashboard Interactive Preview Card -->
+          <div class="card" style="border:2px solid var(--coral-500); background:var(--bg-card); box-shadow:var(--shadow-lg);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; border-bottom:1px solid var(--border-color); padding-bottom:14px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <img src="assets/images/5.png" alt="Sarah Morgan" style="width:42px; height:42px; border-radius:50%; object-fit:cover;" />
+                <div>
+                  <div style="font-weight:700; font-size:0.95rem;">Sarah Morgan</div>
+                  <div style="font-size:0.8rem; color:var(--coral-500);">Parent Portal Preview</div>
+                </div>
+              </div>
+              <span class="status-badge status-completed">Active Student: Ava</span>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:20px;">
+              <div style="background:var(--bg-secondary); padding:16px; border-radius:var(--radius-sm);">
+                <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">HOMEWORK COMPLETION</div>
+                <div style="font-family:var(--font-heading); font-size:1.8rem; color:var(--coral-500);">86%</div>
+              </div>
+              <div style="background:var(--bg-secondary); padding:16px; border-radius:var(--radius-sm);">
+                <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700;">ATTENDANCE RATE</div>
+                <div style="font-family:var(--font-heading); font-size:1.8rem; color:var(--navy-900);">94%</div>
+              </div>
+            </div>
+
+            <div style="background:var(--bg-secondary); padding:16px; border-radius:var(--radius-sm);">
+              <div style="font-size:0.75rem; color:var(--text-muted); font-weight:700; margin-bottom:6px;">LATEST TUTOR NOTE (Maya Chen)</div>
+              <p style="font-size:0.875rem; font-style:italic;">"Ava worked through fraction problems with improving confidence. Practiced identifying equivalent fractions."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOME SECTION 06 — FINAL CTA -->
+    <section class="section section-dark" style="text-align: center;" id="finalCtaSection">
+      <div class="container">
+        <span class="section-tag" style="background:rgba(229,107,93,0.2);">Get Started Today</span>
+        <h2 class="section-title" style="color:var(--ivory-100); max-width:720px; margin-inline:auto;">Give Your Child a Stronger After-School Routine.</h2>
+        <p class="section-subtitle" style="color:var(--slate-400); margin-inline:auto; margin-bottom:36px;">Explore academic support and enrichment programs designed around your child's learning goals.</p>
+        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+          <button class="btn btn-primary js-book-trigger">Book a Session →</button>
+          <a href="contact.html" class="btn btn-secondary" style="border-color:rgba(245,241,232,0.3); color:var(--ivory-100);">Contact Learning Center</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <path d="m9 10 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">BRIGHTPATH</span>
+              <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
+            </div>
+          </a>
+          <p>Structured after-school academic support, homework help, tutoring, and enrichment programs designed to build confidence.</p>
+          <div class="footer-social-links" style="margin-top:20px; display:flex; gap:10px;">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="programs.html" class="footer-link">Programs</a></li>
+            <li><a href="tutors.html" class="footer-link">Our Tutors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Parent Portal</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Parent Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Create Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard Overview</a></li>
+            <li><a href="dashboard.html" class="footer-link">Homework Tracker</a></li>
+            <li><a href="dashboard.html" class="footer-link">Tutor Notes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Learning Center</h4>
+          <p style="color:var(--slate-400); font-size:0.9rem; margin-bottom:8px;">📍 123 Academic Way, Learning City</p>
+          <p style="color:var(--slate-400); font-size:0.9rem; margin-bottom:8px;">📞 (555) 123-4567</p>
+          <p style="color:var(--slate-400); font-size:0.9rem;">✉️ support@brightpathlearning.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 BrightPath After-School Learning Center. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Reusable Modal -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close js-modal-close" aria-label="Close modal">✕</button>
+      <h3 class="auth-title" id="modalTitle" style="font-size:1.6rem; margin-bottom:16px;">Book a Session</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

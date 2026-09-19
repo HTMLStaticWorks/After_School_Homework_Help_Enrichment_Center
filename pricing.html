@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>After-School Program Pricing | BrightPath</title>
+  <meta name="description" content="Review sample pricing plans for BrightPath After-School Learning Center: Homework Support, Focused Tutoring, and Enrichment Plus." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- Sticky Global Header -->
+  <header class="header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="m9 10 2 2 4-4"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">BRIGHTPATH</span>
+          <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home 1</a></li>
+          <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="programs.html" class="nav-link">Programs</a></li>
+          <li><a href="tutors.html" class="nav-link">Tutors</a></li>
+          <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="control-pill">
+          <button type="button" class="icon-circle-btn js-theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button type="button" class="icon-circle-btn js-rtl-toggle" aria-label="Toggle Direction" title="Toggle LTR/RTL Layout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </button>
+          <a href="dashboard.html" class="icon-circle-btn" aria-label="Parent Portal Dashboard" title="Parent Portal Dashboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          </a>
+        </div>
+        <a href="login.html" class="btn btn-primary">Parent Portal →</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open Navigation Menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-backdrop" id="drawerBackdrop"></div>
+    <div class="drawer-content">
+      <div class="drawer-header">
+        <div class="brand-logo">
+          <div class="logo-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></div>
+          <span class="logo-name">BRIGHTPATH</span>
+        </div>
+        <button class="drawer-close" id="drawerClose">✕</button>
+      </div>
+      <ul class="drawer-links">
+        <li><a href="index.html" class="drawer-link">Home 1</a></li>
+        <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="programs.html" class="drawer-link">Programs</a></li>
+        <li><a href="tutors.html" class="drawer-link">Tutors</a></li>
+        <li><a href="pricing.html" class="drawer-link">Pricing</a></li>
+        <li><a href="contact.html" class="drawer-link">Contact</a></li>
+      </ul>
+      <div class="drawer-controls">
+        <div class="control-pill">
+          <button type="button" class="icon-circle-btn js-theme-toggle" aria-label="Toggle Theme" title="Toggle Light/Dark Theme">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          </button>
+          <button type="button" class="icon-circle-btn js-rtl-toggle" aria-label="Toggle Direction" title="Toggle LTR/RTL Layout">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+          </button>
+          <a href="dashboard.html" class="icon-circle-btn" aria-label="Parent Portal Dashboard" title="Parent Portal Dashboard">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/></svg>
+          </a>
+        </div>
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">Parent Portal →</a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- PRICING SECTION 01 — HERO -->
+    <section class="page-hero page-hero-pricing" id="pricingHero">
+      <div class="hero-bg-overlay"></div>
+      <div class="container">
+        <span class="section-tag hero-tag-dark">Transparent Academic Plans</span>
+        <h1 class="hero-title">Flexible Support for Different Learning Needs.</h1>
+        <p class="hero-lead">Choose a structured after-school plan tailored to your family's schedule and academic goals.</p>
+        
+        
+      </div>
+    </section>
+
+    <!-- PRICING SECTION 02 — PRICING PLANS -->
+    <section class="section" id="pricingCardsSection">
+      <div class="container">
+        <div class="grid-3">
+          <!-- Tier 1 -->
+          <div class="price-card">
+            <h3 class="card-title">Homework Support</h3>
+            <p class="card-desc">Ideal for students needing daily guided homework completion and study discipline.</p>
+            <div class="price-amount">$189 <span class="price-period">/ month</span></div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> 3 After-School Sessions / Week</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Guided Homework Assistance</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Small Group Ratio (1:4)</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Weekly Parent Portal Notes</li>
+              <li class="feature-item" style="opacity:0.5; text-decoration:line-through;"><span class="feature-check">✕</span> 1-on-1 Subject Tutoring</li>
+              <li class="feature-item" style="opacity:0.5; text-decoration:line-through;"><span class="feature-check">✕</span> STEM Enrichment Labs</li>
+            </ul>
+            <button class="btn btn-secondary js-book-trigger" data-session="Homework Support Plan" style="margin-top:auto; width:100%;">Select Homework Support →</button>
+          </div>
+
+          <!-- Tier 2 (Featured) -->
+          <div class="price-card featured">
+            <div class="popular-badge">RECOMMENDED</div>
+            <h3 class="card-title">Focused Tutoring</h3>
+            <p class="card-desc">Combines daily homework help with dedicated 1-on-1 subject tutoring in Math or Science.</p>
+            <div class="price-amount">$279 <span class="price-period">/ month</span></div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> 4 After-School Sessions / Week</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Daily Guided Homework Help</li>
+              <li class="feature-item"><span class="feature-check">✓</span> 2 Dedicated 1-on-1 Tutoring Slots</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Subject Progress Tracking</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Real-Time Parent Portal Access</li>
+              <li class="feature-item" style="opacity:0.5; text-decoration:line-through;"><span class="feature-check">✕</span> STEM Elective Workshops</li>
+            </ul>
+            <button class="btn btn-primary js-book-trigger" data-session="Focused Tutoring Plan" style="margin-top:auto; width:100%;">Select Focused Tutoring →</button>
+          </div>
+
+          <!-- Tier 3 -->
+          <div class="price-card">
+            <h3 class="card-title">Enrichment Plus</h3>
+            <p class="card-desc">All-inclusive academic support including advanced subject tutoring and STEM workshops.</p>
+            <div class="price-amount">$369 <span class="price-period">/ month</span></div>
+            <ul class="feature-list">
+              <li class="feature-item"><span class="feature-check">✓</span> Unlimited After-School Sessions</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Daily Guided Homework Support</li>
+              <li class="feature-item"><span class="feature-check">✓</span> 1-on-1 Math, Science & English Tutoring</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Weekly STEM & Writing Workshops</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Priority Tutor Matching</li>
+              <li class="feature-item"><span class="feature-check">✓</span> Priority Rescheduling Rights</li>
+            </ul>
+            <button class="btn btn-secondary js-book-trigger" data-session="Enrichment Plus Plan" style="margin-top:auto; width:100%;">Select Enrichment Plus →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION 03 — COMPARISON MATRIX -->
+    <section class="section" style="background:var(--bg-secondary);" id="pricingMatrixSection">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Detailed Matrix</span>
+          <h2 class="section-title">Feature Comparison</h2>
+          <p class="section-subtitle" style="margin-inline:auto;">Compare core features across all three learning tiers.</p>
+        </div>
+
+        <div class="table-container">
+          <table class="dash-table">
+            <thead>
+              <tr>
+                <th>Service / Feature</th>
+                <th>Homework Support</th>
+                <th>Focused Tutoring</th>
+                <th>Enrichment Plus</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Weekly Sessions</strong></td>
+                <td>3 Days / Week</td>
+                <td>4 Days / Week</td>
+                <td>Unlimited Access</td>
+              </tr>
+              <tr>
+                <td><strong>Homework Verification</strong></td>
+                <td>✓ Included</td>
+                <td>✓ Included</td>
+                <td>✓ Included</td>
+              </tr>
+              <tr>
+                <td><strong>1-on-1 Subject Tutoring</strong></td>
+                <td>Optional Add-on</td>
+                <td>2 Hours / Week</td>
+                <td>4 Hours / Week</td>
+              </tr>
+              <tr>
+                <td><strong>Parent Portal Access</strong></td>
+                <td>✓ Included</td>
+                <td>✓ Included</td>
+                <td>✓ Priority Access</td>
+              </tr>
+              <tr>
+                <td><strong>Tutor Session Notes</strong></td>
+                <td>Weekly Summary</td>
+                <td>Daily Notes</td>
+                <td>Daily Notes + Call</td>
+              </tr>
+              <tr>
+                <td><strong>STEM & Writing Workshops</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td>✓ Included</td>
+              </tr>
+              <tr>
+                <td><strong>Session Rescheduling</strong></td>
+                <td>24h Notice</td>
+                <td>12h Notice</td>
+                <td>Flexible Same-Day</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION 04 — HOW BILLING WORKS -->
+    <section class="section" id="billingFaqSection">
+      <div class="container" style="max-width:840px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+          <span class="section-tag">Billing FAQ</span>
+          <h2 class="section-title">How Billing & Scheduling Works</h2>
+          <p class="section-subtitle" style="margin-inline:auto;">Common questions about session scheduling, payments, and pauses.</p>
+        </div>
+
+        <div class="accordion-item active">
+          <button class="accordion-header">
+            <span>How does monthly billing work?</span>
+            <span>▼</span>
+          </button>
+          <div class="accordion-body">
+            Plans are billed on a month-to-month basis with no long-term contracts. You can update payment options anytime via your parent portal dashboard.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Can I reschedule a missed after-school session?</span>
+            <span>▼</span>
+          </button>
+          <div class="accordion-body">
+            Yes! Session reschedules can be requested directly inside the parent portal up to 12 hours before the scheduled session.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Are there family or sibling discounts available?</span>
+            <span>▼</span>
+          </button>
+          <div class="accordion-body">
+            We offer a 15% discount for a second enrolled sibling. Speak with our center coordinator when booking your session.
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <span>Can I pause enrollment during school vacations?</span>
+            <span>▼</span>
+          </button>
+          <div class="accordion-body">
+            Enrollments can be paused for up to 4 weeks per calendar year without losing your student's reserved tutor slot.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION 05 — CTA -->
+    <section class="section section-dark" style="text-align: center;" id="pricingCta">
+      <div class="container">
+        <span class="section-tag" style="background:rgba(229,107,93,0.2);">Get Started</span>
+        <h2 class="section-title" style="color:var(--ivory-100);">Book A Consultation Session Today.</h2>
+        <p class="section-subtitle" style="color:var(--slate-400); margin-inline:auto; margin-bottom:32px;">Our team will evaluate your child's coursework and help select the ideal program plan.</p>
+        <button class="btn btn-primary js-book-trigger" data-session="General Plan Consultation">Book a Session →</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <path d="m9 10 2 2 4-4"></path>
+              </svg>
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">BRIGHTPATH</span>
+              <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
+            </div>
+          </a>
+          <p>Structured after-school academic support, homework help, tutoring, and enrichment programs designed to build confidence.</p>
+          <div class="footer-social-links" style="margin-top:20px; display:flex; gap:10px;">
+            <a href="#" class="social-icon-btn" aria-label="Facebook">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.74a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="YouTube">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="#" class="social-icon-btn" aria-label="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="programs.html" class="footer-link">Programs</a></li>
+            <li><a href="tutors.html" class="footer-link">Our Tutors</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Parent Portal</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Parent Sign In</a></li>
+            <li><a href="register.html" class="footer-link">Create Account</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard Overview</a></li>
+            <li><a href="dashboard.html" class="footer-link">Homework Tracker</a></li>
+            <li><a href="dashboard.html" class="footer-link">Tutor Notes</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Learning Center</h4>
+          <p style="color:var(--slate-400); font-size:0.9rem; margin-bottom:8px;">📍 123 Academic Way, Learning City</p>
+          <p style="color:var(--slate-400); font-size:0.9rem; margin-bottom:8px;">📞 (555) 123-4567</p>
+          <p style="color:var(--slate-400); font-size:0.9rem;">✉️ support@brightpathlearning.com</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 BrightPath After-School Learning Center. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Universal Reusable Modal -->
+  <div class="modal-overlay" id="globalModal" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close js-modal-close">✕</button>
+      <h3 class="auth-title" id="modalTitle" style="font-size:1.6rem; margin-bottom:16px;">Book a Session</h3>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

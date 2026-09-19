@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parent Portal Dashboard | BrightPath</title>
+  <meta name="description" content="BrightPath Parent Portal Dashboard: Track student homework completion, tutor notes, session schedules, attendance, and progress reports." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/dashboard.css" />
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- DASHBOARD SIDEBAR -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <a href="index.html" class="sidebar-header" title="Return to Home Page">
+        <div class="logo-icon" style="width:36px; height:36px; background:var(--coral-500); color:var(--navy-900);">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+            <path d="m9 10 2 2 4-4"></path>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name" style="color:var(--ivory-100); font-size:1.2rem;">BRIGHTPATH</span>
+          <span class="logo-sub" style="color:var(--coral-500); font-size:0.6rem;">PARENT PORTAL</span>
+        </div>
+      </a>
+
+      <ul class="sidebar-menu">
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav active" data-view="overview">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Overview</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="sessions">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+            <span>My Sessions</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="homework">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            <span>Homework Tracker</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="attendance">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            <span>Attendance</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="reports">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="12" y1="18" x2="12" y2="12"></line><line x1="9" y1="15" x2="15" y2="15"></line></svg>
+            <span>Progress Reports</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="payments">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>Payments & Billing</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="notifications">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span>Notifications</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="profile">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Family Profile</span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="menu-item-btn js-dash-nav" data-view="support">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            <span>Help & Support</span>
+          </button>
+        </li>
+      </ul>
+
+      <div class="sidebar-footer">
+        <button type="button" class="btn-signout" onclick="window.location.href='index.html'">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          <span>Sign Out</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- DASHBOARD MAIN AREA -->
+    <main class="dash-main">
+      
+      <!-- TOPBAR -->
+      <header class="dash-topbar">
+        <div class="topbar-left">
+          <button class="dash-menu-toggle" id="dashMenuToggle" aria-label="Toggle Navigation">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          </button>
+          <h1 class="dash-page-title" id="dashPageTitle">Dashboard Overview</h1>
+        </div>
+
+        <div class="topbar-right">
+          <button class="icon-badge-btn js-dash-nav" data-view="notifications" aria-label="Notifications">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+            <span class="badge-dot" id="unreadNotifBadge"></span>
+          </button>
+
+          <div class="control-pill">
+            <button type="button" class="icon-circle-btn js-dash-theme" aria-label="Toggle Theme"></button>
+            <button type="button" class="icon-circle-btn js-dash-rtl" aria-label="Toggle Direction"></button>
+          </div>
+
+          <div class="user-profile-badge js-dash-nav" data-view="profile" style="cursor:pointer;">
+            <img src="assets/images/15.png" alt="Sarah Morgan" class="user-avatar" />
+            <div class="user-info">
+              <span class="user-name">Sarah Morgan</span>
+              <span class="user-child">Student: Ava (Grade 6)</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- CONTENT AREA -->
+      <div class="dash-content">
+        
+        <!-- 01. OVERVIEW VIEW -->
+        <section class="dash-view active" id="view-overview">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Welcome back, Sarah 👋</h2>
+            <p style="color:var(--text-muted);">Here is your child Ava's learning activity summary for this week.</p>
+          </div>
+
+          <!-- KPI Cards -->
+          <div class="kpi-grid">
+            <div class="kpi-card">
+              <div>
+                <span class="kpi-label">Upcoming Sessions</span>
+                <div class="kpi-val">3</div>
+                <span class="kpi-sub">Next: Wed 4:30 PM</span>
+              </div>
+              <div class="kpi-icon coral">📅</div>
+            </div>
+
+            <div class="kpi-card">
+              <div>
+                <span class="kpi-label">Homework Completed</span>
+                <div class="kpi-val">86%</div>
+                <span class="kpi-sub">↑ 4% vs last week</span>
+              </div>
+              <div class="kpi-icon emerald">📝</div>
+            </div>
+
+            <div class="kpi-card">
+              <div>
+                <span class="kpi-label">Attendance Rate</span>
+                <div class="kpi-val">94%</div>
+                <span class="kpi-sub">September Average</span>
+              </div>
+              <div class="kpi-icon navy">📈</div>
+            </div>
+
+            <div class="kpi-card">
+              <div>
+                <span class="kpi-label">Active Programs</span>
+                <div class="kpi-val">4</div>
+                <span class="kpi-sub">Enrolled & Active</span>
+              </div>
+              <div class="kpi-icon amber">🎒</div>
+            </div>
+          </div>
+
+          <!-- Next Session & Subject Progress -->
+          <div class="grid-2" style="margin-bottom:32px;">
+            
+            <!-- Next Session Panel -->
+            <div class="card">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                <h3 class="card-title" style="font-size:1.3rem;">Next Scheduled Session</h3>
+                <span class="status-badge status-confirmed">Confirmed</span>
+              </div>
+              <div style="background:var(--bg-secondary); padding:20px; border-radius:var(--radius-sm); margin-bottom:20px;">
+                <div style="font-family:var(--font-heading); font-size:1.5rem; color:var(--coral-500); margin-bottom:4px;">Wednesday, Sep 23 • 4:30 PM</div>
+                <div style="font-weight:700; font-size:1.05rem;">Math Foundations & Algebra Help</div>
+                <div style="color:var(--text-muted); font-size:0.9rem; margin-top:4px;">Assigned Tutor: Maya Chen</div>
+              </div>
+              <div style="display:flex; gap:12px;">
+                <button class="btn btn-navy js-dash-nav" data-view="sessions" style="flex:1;">View Session Details</button>
+                <button class="btn btn-secondary" onclick="alert('Reschedule request sent to center manager.')">Reschedule</button>
+              </div>
+            </div>
+
+            <!-- Subject Progress Bars -->
+            <div class="card">
+              <h3 class="card-title" style="font-size:1.3rem; margin-bottom:20px;">Subject Mastery Overview <span style="font-size:0.75rem; color:var(--text-muted); font-weight:normal;">(Sample Data)</span></h3>
+              <div class="progress-bar-group">
+                <div class="progress-item">
+                  <div class="progress-header"><span>Mathematics</span><span>88%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:88%;"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-header"><span>Science & Lab Reports</span><span>74%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:74%; background:#F59E0B;"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-header"><span>Reading & Literacy</span><span>92%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:92%; background:#10B981;"></div></div>
+                </div>
+                <div class="progress-item">
+                  <div class="progress-header"><span>Essay Writing</span><span>81%</span></div>
+                  <div class="progress-track"><div class="progress-fill" style="width:81%;"></div></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Latest Tutor Notes -->
+          <div class="card">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+              <h3 class="card-title" style="font-size:1.3rem;">Recent Tutor Note</h3>
+              <button class="btn btn-secondary js-dash-nav" data-view="reports" style="padding:6px 16px; font-size:0.85rem;">View All Notes →</button>
+            </div>
+            <div style="display:flex; gap:16px; align-items:flex-start; background:var(--bg-secondary); padding:20px; border-radius:var(--radius-sm);">
+              <img src="assets/images/16.png" alt="Maya Chen" style="width:48px; height:48px; border-radius:50%; object-fit:cover;" />
+              <div>
+                <div style="display:flex; gap:10px; align-items:center; margin-bottom:4px;">
+                  <strong style="font-size:0.95rem;">Maya Chen</strong>
+                  <span style="font-size:0.8rem; color:var(--text-muted);">Sep 17 • Math Session</span>
+                </div>
+                <p style="font-size:0.9rem; color:var(--text-primary); font-style:italic;">"Ava worked through fraction problems with improving confidence. We practiced identifying equivalent fractions and converting improper fractions."</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02. MY SESSIONS VIEW -->
+        <section class="dash-view" id="view-sessions">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h2 style="font-family:var(--font-heading); font-size:1.8rem;">My Sessions & Schedule</h2>
+              <p style="color:var(--text-muted);">View upcoming after-school sessions and past session records.</p>
+            </div>
+            <div class="filter-tabs" style="margin:0;">
+              <button class="tab-btn js-session-filter active" data-filter="all">All Sessions</button>
+              <button class="tab-btn js-session-filter" data-filter="upcoming">Upcoming</button>
+              <button class="tab-btn js-session-filter" data-filter="completed">Completed</button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Date & Time</th>
+                  <th>Subject Focus</th>
+                  <th>Assigned Tutor</th>
+                  <th>Format</th>
+                  <th>Status</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="js-session-row" data-status="upcoming">
+                  <td><strong>Wed, Sep 23 • 4:30 PM</strong></td>
+                  <td>Math Foundations</td>
+                  <td>Maya Chen</td>
+                  <td>In-Center</td>
+                  <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                  <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Session confirmed for Wed Sep 23.')">View</button></td>
+                </tr>
+                <tr class="js-session-row" data-status="upcoming">
+                  <td><strong>Fri, Sep 25 • 5:00 PM</strong></td>
+                  <td>Science & Lab Support</td>
+                  <td>Priya Shah</td>
+                  <td>In-Center</td>
+                  <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                  <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Session confirmed for Fri Sep 25.')">View</button></td>
+                </tr>
+                <tr class="js-session-row" data-status="completed">
+                  <td><strong>Mon, Sep 21 • 4:30 PM</strong></td>
+                  <td>Reading & Grammar</td>
+                  <td>Daniel Brooks</td>
+                  <td>Virtual 1-on-1</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Reviewing session recording...')">Notes</button></td>
+                </tr>
+                <tr class="js-session-row" data-status="completed">
+                  <td><strong>Wed, Sep 16 • 4:30 PM</strong></td>
+                  <td>Math Fractions</td>
+                  <td>Maya Chen</td>
+                  <td>In-Center</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Reviewing session notes...')">Notes</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 03. HOMEWORK TRACKER VIEW -->
+        <section class="dash-view" id="view-homework">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Homework Completion Tracker</h2>
+            <p style="color:var(--text-muted);">Track daily assignments, due dates, tutor comments, and completion status.</p>
+          </div>
+
+          <div class="table-container">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Subject</th>
+                  <th>Assignment Title</th>
+                  <th>Due Date</th>
+                  <th>Status</th>
+                  <th>Tutor Feedback</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Mathematics</strong></td>
+                  <td>Fraction Word Problems (Ch. 4)</td>
+                  <td>Sep 24, 2026</td>
+                  <td><span class="status-badge status-in-progress">In Progress</span></td>
+                  <td>Reviewed with Maya in session</td>
+                  <td><button class="btn btn-primary js-mark-complete" style="padding:4px 12px; font-size:0.8rem;">Mark Complete</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Science</strong></td>
+                  <td>Photosynthesis Lab Report</td>
+                  <td>Sep 26, 2026</td>
+                  <td><span class="status-badge status-needs-review">Needs Review</span></td>
+                  <td>Draft outline completed</td>
+                  <td><button class="btn btn-primary js-mark-complete" style="padding:4px 12px; font-size:0.8rem;">Mark Complete</button></td>
+                </tr>
+                <tr>
+                  <td><strong>English</strong></td>
+                  <td>Persuasive Essay Draft</td>
+                  <td>Sep 20, 2026</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td>Excellent paragraph structure</td>
+                  <td><button class="btn btn-secondary" disabled style="padding:4px 12px; font-size:0.8rem; opacity:0.6;">Done ✓</button></td>
+                </tr>
+                <tr>
+                  <td><strong>Reading</strong></td>
+                  <td>Chapter 5 Vocabulary List</td>
+                  <td>Sep 18, 2026</td>
+                  <td><span class="status-badge status-completed">Completed</span></td>
+                  <td>All 15 terms mastered</td>
+                  <td><button class="btn btn-secondary" disabled style="padding:4px 12px; font-size:0.8rem; opacity:0.6;">Done ✓</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 04. ATTENDANCE VIEW -->
+        <section class="dash-view" id="view-attendance">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Attendance History & Calendar</h2>
+            <p style="color:var(--text-muted);">Monthly after-school center attendance log for student Ava Morgan.</p>
+          </div>
+
+          <div class="grid-3" style="margin-bottom:32px;">
+            <div class="card" style="text-align:center;">
+              <div style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">SEPTEMBER RATE</div>
+              <div style="font-family:var(--font-heading); font-size:2.4rem; color:var(--coral-500);">94%</div>
+              <span style="font-size:0.8rem; color:#10B981;">Present for 15/16 sessions</span>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">AUGUST RATE</div>
+              <div style="font-family:var(--font-heading); font-size:2.4rem; color:var(--navy-900);">97%</div>
+              <span style="font-size:0.8rem; color:#10B981;">Present for 16/16 sessions</span>
+            </div>
+            <div class="card" style="text-align:center;">
+              <div style="font-size:0.8rem; color:var(--text-muted); font-weight:700;">TOTAL HOURS</div>
+              <div style="font-family:var(--font-heading); font-size:2.4rem; color:var(--coral-500);">38 hrs</div>
+              <span style="font-size:0.8rem; color:var(--text-muted);">Learning center hours</span>
+            </div>
+          </div>
+
+          <!-- Attendance Calendar -->
+          <div class="card">
+            <h3 class="card-title" style="font-size:1.3rem; margin-bottom:16px;">September 2026 Attendance Grid</h3>
+            <div class="calendar-grid">
+              <div class="calendar-day-head">Mon</div>
+              <div class="calendar-day-head">Tue</div>
+              <div class="calendar-day-head">Wed</div>
+              <div class="calendar-day-head">Thu</div>
+              <div class="calendar-day-head">Fri</div>
+              <div class="calendar-day-head">Sat</div>
+              <div class="calendar-day-head">Sun</div>
+
+              <div class="calendar-cell present">1<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">2<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">3<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">4<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell">5</div><div class="calendar-cell">6</div><div class="calendar-cell">7</div>
+
+              <div class="calendar-cell present">8<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">9<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">10<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell rescheduled">11<br/><span style="font-size:0.65rem;">⏰</span></div>
+              <div class="calendar-cell">12</div><div class="calendar-cell">13</div><div class="calendar-cell">14</div>
+
+              <div class="calendar-cell present">15<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">16<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">17<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell present">18<br/><span style="font-size:0.65rem;">✓</span></div>
+              <div class="calendar-cell">19</div><div class="calendar-cell">20</div><div class="calendar-cell">21</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05. TUTOR NOTES VIEW -->
+        <section class="dash-view" id="view-notes">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Chronological Tutor Notes</h2>
+              <p style="color:var(--text-muted);">Direct daily feedback from Ava's subject tutors.</p>
+            </div>
+            <div class="filter-tabs" style="margin:0;">
+              <button class="tab-btn js-note-filter active" data-subject="all">All Notes</button>
+              <button class="tab-btn js-note-filter" data-subject="math">Math</button>
+              <button class="tab-btn js-note-filter" data-subject="science">Science</button>
+              <button class="tab-btn js-note-filter" data-subject="english">English</button>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <div class="card js-note-card" data-subject="math">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <img src="assets/images/17.png" alt="Maya Chen" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" />
+                  <div>
+                    <strong style="font-size:1rem;">Maya Chen</strong> — <span style="color:var(--coral-500); font-weight:600;">Math Foundations</span>
+                  </div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Sep 17, 2026</span>
+              </div>
+              <p style="color:var(--text-primary); font-size:0.95rem; line-height:1.6;">"Ava worked through fraction problems with improving confidence. We practiced identifying equivalent fractions and converting improper fractions to mixed numbers. She grasped the concept quickly!"</p>
+            </div>
+
+            <div class="card js-note-card" data-subject="science">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <img src="assets/images/18.png" alt="Priya Shah" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" />
+                  <div>
+                    <strong style="font-size:1rem;">Priya Shah</strong> — <span style="color:var(--coral-500); font-weight:600;">Science & Lab</span>
+                  </div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Sep 15, 2026</span>
+              </div>
+              <p style="color:var(--text-primary); font-size:0.95rem; line-height:1.6;">"Great session reviewing cellular biology terms. Ava created flashcards for organelles which helped her memorize key definitions."</p>
+            </div>
+
+            <div class="card js-note-card" data-subject="english">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <div style="display:flex; align-items:center; gap:12px;">
+                  <img src="assets/images/19.png" alt="Daniel Brooks" style="width:44px; height:44px; border-radius:50%; object-fit:cover;" />
+                  <div>
+                    <strong style="font-size:1rem;">Daniel Brooks</strong> — <span style="color:var(--coral-500); font-weight:600;">English & Writing</span>
+                  </div>
+                </div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Sep 12, 2026</span>
+              </div>
+              <p style="color:var(--text-primary); font-size:0.95rem; line-height:1.6;">"Reviewed essay thesis statements. Ava's introduction paragraph is strong and articulate. We will focus on transition sentences next time."</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 06. PROGRESS REPORTS VIEW -->
+        <section class="dash-view" id="view-reports">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Academic Progress Reports</h2>
+            <p style="color:var(--text-muted);">Official term evaluation reports compiled by BrightPath academic directors.</p>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <span class="status-badge status-completed" style="margin-bottom:12px;">Official Report</span>
+              <h3 class="card-title">September Learning Review</h3>
+              <p class="card-desc" style="margin-bottom:20px;">Comprehensive monthly review covering homework completion rates, Math comprehension, and study habits growth.</p>
+              <button class="btn btn-navy" style="width:100%;" onclick="alert('Viewing Full September Learning Review Report PDF (Sample)')">View Report →</button>
+            </div>
+
+            <div class="card">
+              <span class="status-badge status-completed" style="margin-bottom:12px;">Subject Deep Dive</span>
+              <h3 class="card-title">Math Growth Benchmark</h3>
+              <p class="card-desc" style="margin-bottom:20px;">Targeted assessment showing 18% improvement in pre-algebra quiz scores over 6 weeks.</p>
+              <button class="btn btn-navy" style="width:100%;" onclick="alert('Viewing Math Benchmark Assessment (Sample)')">View Report →</button>
+            </div>
+
+            <div class="card">
+              <span class="status-badge status-completed" style="margin-bottom:12px;">Habits Report</span>
+              <h3 class="card-title">Study Executive Function</h3>
+              <p class="card-desc" style="margin-bottom:20px;">Evaluation of time management, binder organization, and test preparation routines.</p>
+              <button class="btn btn-navy" style="width:100%;" onclick="alert('Viewing Study Habits Evaluation (Sample)')">View Report →</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 07. MY PROGRAMS VIEW -->
+        <section class="dash-view" id="view-programs">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Enrolled Learning Programs</h2>
+            <p style="color:var(--text-muted);">Active programs enrolled for student Ava Morgan.</p>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <span style="font-size:0.75rem; font-weight:700; color:var(--coral-500); text-transform:uppercase;">Core Program</span>
+              <h3 class="card-title">Focused Tutoring & Homework Support</h3>
+              <p class="card-desc">4 sessions / week combining daily guided homework help with 1-on-1 Math and Science tutoring.</p>
+              <div style="margin:20px 0; background:var(--bg-secondary); padding:16px; border-radius:var(--radius-sm);">
+                <div style="font-size:0.85rem;"><strong>Assigned Tutors:</strong> Maya Chen, Priya Shah</div>
+                <div style="font-size:0.85rem; margin-top:4px;"><strong>Sessions Remaining this Month:</strong> 7 / 16</div>
+              </div>
+              <button class="btn btn-secondary" style="width:100%;" onclick="alert('Program details & curriculum schedule loaded.')">View Program Schedule</button>
+            </div>
+
+            <div class="card">
+              <span style="font-size:0.75rem; font-weight:700; color:var(--coral-500); text-transform:uppercase;">Elective Workshop</span>
+              <h3 class="card-title">STEM Robotics & Coding Lab</h3>
+              <p class="card-desc">Weekly Saturday workshop focusing on logic puzzles, basic block coding, and science experiments.</p>
+              <div style="margin:20px 0; background:var(--bg-secondary); padding:16px; border-radius:var(--radius-sm);">
+                <div style="font-size:0.85rem;"><strong>Instructor:</strong> Priya Shah</div>
+                <div style="font-size:0.85rem; margin-top:4px;"><strong>Session Time:</strong> Saturdays 10:00 AM – 11:30 AM</div>
+              </div>
+              <button class="btn btn-secondary" style="width:100%;" onclick="alert('STEM Lab module details loaded.')">View Lab Details</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 08. PAYMENTS & BILLING VIEW -->
+        <section class="dash-view" id="view-payments">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Payments & Billing Management</h2>
+            <p style="color:var(--text-muted);">Manage payment methods, view monthly billing statements, and receipts.</p>
+          </div>
+
+          <!-- Masked Card Info -->
+          <div class="card" style="margin-bottom:32px;">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+              <div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--text-muted); text-transform:uppercase;">Current Payment Method</div>
+                <div style="font-family:var(--font-heading); font-size:1.4rem; color:var(--text-primary); margin:4px 0;">Visa ending in •••• 4821</div>
+                <div style="font-size:0.85rem; color:var(--text-muted);">Expires 09/28 • Default Payment Card (Demo)</div>
+              </div>
+              <button class="btn btn-navy" id="btnUpdatePayment">Update Payment Method</button>
+            </div>
+          </div>
+
+          <!-- Billing History Table -->
+          <div class="card">
+            <h3 class="card-title" style="font-size:1.3rem; margin-bottom:16px;">Recent Billing Statements</h3>
+            <div class="table-container">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Plan Description</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sep 01, 2026</td>
+                    <td>Focused Tutoring Plan (Monthly)</td>
+                    <td>$279.00</td>
+                    <td><span class="status-badge status-paid">Paid</span></td>
+                    <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Download receipt PDF (Demo)')">Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>Aug 01, 2026</td>
+                    <td>Focused Tutoring Plan (Monthly)</td>
+                    <td>$279.00</td>
+                    <td><span class="status-badge status-paid">Paid</span></td>
+                    <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Download receipt PDF (Demo)')">Receipt</button></td>
+                  </tr>
+                  <tr>
+                    <td>Jul 01, 2026</td>
+                    <td>Homework Support Plan (Monthly)</td>
+                    <td>$189.00</td>
+                    <td><span class="status-badge status-paid">Paid</span></td>
+                    <td><button class="btn btn-secondary" style="padding:4px 12px; font-size:0.8rem;" onclick="alert('Download receipt PDF (Demo)')">Receipt</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- 09. NOTIFICATIONS VIEW -->
+        <section class="dash-view" id="view-notifications">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Notifications & Center Updates</h2>
+              <p style="color:var(--text-muted);">Alerts regarding session schedules, tutor notes, and center announcements.</p>
+            </div>
+            <button class="btn btn-secondary" id="btnMarkAllRead" style="font-size:0.85rem; padding:8px 16px;">Mark All As Read</button>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div class="card js-notif-item" style="border-inline-start:4px solid var(--coral-500);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span class="badge-dot"></span>
+                  <strong style="font-size:1rem;">Session Reminder</strong>
+                </div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Today 2:00 PM</span>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">Reminder: Ava has a Math session with Maya Chen tomorrow Wednesday at 4:30 PM.</p>
+              <button class="js-delete-notif" style="color:var(--coral-500); font-size:0.8rem; font-weight:600; margin-top:10px;">Dismiss Notification</button>
+            </div>
+
+            <div class="card js-notif-item" style="border-inline-start:4px solid var(--navy-900);">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <span class="badge-dot"></span>
+                  <strong style="font-size:1rem;">New Session Note Added</strong>
+                </div>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Yesterday</span>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">Maya Chen added a new session note for Math Foundations.</p>
+              <button class="js-delete-notif" style="color:var(--coral-500); font-size:0.8rem; font-weight:600; margin-top:10px;">Dismiss Notification</button>
+            </div>
+
+            <div class="card js-notif-item">
+              <div style="display:flex; justify-content:space-between; align-items:center;">
+                <strong style="font-size:1rem;">September Progress Report Available</strong>
+                <span style="font-size:0.8rem; color:var(--text-muted);">Sep 15</span>
+              </div>
+              <p style="color:var(--text-muted); font-size:0.9rem; margin-top:8px;">The September Academic Progress Report is ready for review.</p>
+              <button class="js-delete-notif" style="color:var(--coral-500); font-size:0.8rem; font-weight:600; margin-top:10px;">Dismiss Notification</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- 10. PROFILE VIEW -->
+        <section class="dash-view" id="view-profile">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; flex-wrap:wrap; gap:16px;">
+            <div>
+              <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Family Profile Information</h2>
+              <p style="color:var(--text-muted);">Manage parent contact details and student profile preferences.</p>
+            </div>
+            <button class="btn btn-primary" id="btnEditProfile">Edit Profile Information →</button>
+          </div>
+
+          <div class="grid-2">
+            <div class="card">
+              <h3 class="card-title" style="font-size:1.3rem; margin-bottom:20px;">Parent Profile Details</h3>
+              <div style="display:flex; flex-direction:column; gap:14px; font-size:0.95rem;">
+                <div><span style="color:var(--text-muted);">Parent Full Name:</span><br/><strong>Sarah Morgan</strong></div>
+                <div><span style="color:var(--text-muted);">Email Address:</span><br/><strong>parent@example.com</strong></div>
+                <div><span style="color:var(--text-muted);">Phone Number:</span><br/><strong>+1 (555) 234-5678</strong></div>
+                <div><span style="color:var(--text-muted);">Home Address:</span><br/><strong>123 Garden Lane, Learning City</strong></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <h3 class="card-title" style="font-size:1.3rem; margin-bottom:20px;">Enrolled Student Details</h3>
+              <div style="display:flex; flex-direction:column; gap:14px; font-size:0.95rem;">
+                <div><span style="color:var(--text-muted);">Student Name:</span><br/><strong>Ava Morgan</strong></div>
+                <div><span style="color:var(--text-muted);">Current School Grade:</span><br/><strong>Grade 6 (Middle School)</strong></div>
+                <div><span style="color:var(--text-muted);">Primary Focus Subjects:</span><br/><strong>Mathematics, Science, Essay Writing</strong></div>
+                <div><span style="color:var(--text-muted);">Center Status:</span><br/><span class="status-badge status-confirmed">Active Student</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 11. HELP & SUPPORT VIEW -->
+        <section class="dash-view" id="view-support">
+          <div style="margin-bottom:24px;">
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem;">Parent Support & FAQs</h2>
+            <p style="color:var(--text-muted);">Find answers to common questions or submit a ticket to our center team.</p>
+          </div>
+
+          <div class="grid-2">
+            <div>
+              <h3 class="card-title" style="font-size:1.3rem; margin-bottom:20px;">Frequently Asked Questions</h3>
+              
+              <div class="accordion-item active">
+                <button class="accordion-header">
+                  <span>How do I reschedule a missed session?</span>
+                  <span>▼</span>
+                </button>
+                <div class="accordion-body">
+                  Go to "My Sessions", click the reschedule button next to your upcoming session, and choose a replacement time slot.
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-header">
+                  <span>How can I contact Ava's tutor directly?</span>
+                  <span>▼</span>
+                </button>
+                <div class="accordion-body">
+                  Tutors share weekly session notes directly on the "Tutor Notes" tab. You can also request a parent-tutor call through center management.
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button class="accordion-header">
+                  <span>Where can I view official progress reports?</span>
+                  <span>▼</span>
+                </button>
+                <div class="accordion-body">
+                  Monthly evaluations are compiled by directors and accessible under the "Progress Reports" tab.
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Support Ticket Form -->
+            <div class="card">
+              <h3 class="card-title" style="font-size:1.3rem; margin-bottom:16px;">Submit Support Ticket</h3>
+              <form id="supportTicketForm" onsubmit="event.preventDefault(); alert('Support ticket submitted successfully!'); this.reset();">
+                <div class="form-group">
+                  <label class="form-label">Topic / Category</label>
+                  <select class="form-input">
+                    <option value="Schedule">Schedule & Attendance</option>
+                    <option value="Tutor">Tutor Feedback</option>
+                    <option value="Billing">Billing & Payment</option>
+                    <option value="Other">General Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Message Details</label>
+                  <textarea class="form-input" rows="4" placeholder="How can our center manager assist you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Submit Support Ticket →</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Universal Reusable Dashboard Modal Overlay -->
+  <div class="modal-overlay" id="dashModal" aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close js-modal-close">✕</button>
+      <h3 class="auth-title" id="dashModalTitle" style="font-size:1.5rem; margin-bottom:16px;">Dashboard Modal</h3>
+      <div id="dashModalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
