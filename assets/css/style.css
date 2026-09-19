@@ -1440,15 +1440,16 @@ html[data-theme="dark"] .card-icon {
 .table-container {
   width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   border-radius: var(--radius-lg);
   border: 2px solid var(--navy-900);
   box-shadow: var(--shadow-md);
   background: var(--bg-card);
-  overflow: hidden;
 }
 
 .dash-table {
   width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
   text-align: start;
 }
@@ -1890,6 +1891,21 @@ html[data-theme="dark"] .back-to-top {
   .hero-btns .btn {
     width: 100%;
     justify-content: center;
+  }
+
+  .table-container {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dash-table {
+    min-width: 580px;
+  }
+
+  .dash-table th,
+  .dash-table td {
+    padding: 14px 16px;
+    white-space: nowrap;
   }
 }
 
