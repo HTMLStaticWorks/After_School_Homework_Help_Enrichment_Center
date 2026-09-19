@@ -551,17 +551,20 @@ html[data-theme="dark"] .logo-icon {
    ========================================================================== */
 .auth-viewport {
   min-height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 84px 16px 40px;
   position: relative;
   background-color: var(--bg-primary);
+  box-sizing: border-box;
 }
 
-/* Fixed Top-Right Theme & RTL Controls - MUST NEVER OVERLAP CARD */
+/* Top-Right Theme & RTL Controls - Anchored Outside Card */
 .auth-top-controls {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 16px;
   inset-inline-end: 20px;
   z-index: 1000;
   display: flex;
@@ -1850,6 +1853,15 @@ html[data-theme="dark"] .back-to-top {
     grid-template-columns: 1fr;
   }
   
+  .auth-viewport {
+    padding-top: 76px !important;
+  }
+
+  .auth-top-controls {
+    top: 14px !important;
+    inset-inline-end: 14px !important;
+  }
+
   .auth-card {
     padding: 28px 20px;
   }
