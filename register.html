@@ -6,6 +6,14 @@
   <title>Create Parent Account | BrightPath</title>
   <meta name="description" content="Register for a BrightPath parent portal account to track after-school progress, tutor notes, and homework completion." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('brightpath_theme') || 'light';
+      var dir = localStorage.getItem('brightpath_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body style="background-color: var(--bg-primary);">
@@ -34,7 +42,6 @@
           </div>
           <div class="logo-text" style="text-align:start;">
             <span class="logo-name" style="font-size:1.2rem;">BRIGHTPATH</span>
-            <span class="logo-sub" style="font-size:0.6rem;">AFTER-SCHOOL LEARNING</span>
           </div>
         </a>
 

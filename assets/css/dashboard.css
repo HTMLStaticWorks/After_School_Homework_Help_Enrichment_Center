@@ -357,6 +357,10 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  width: fit-content;
+  max-width: fit-content;
+  align-self: flex-start;
+  white-space: nowrap;
 }
 
 .status-confirmed, .status-completed, .status-present, .status-paid {
@@ -459,11 +463,18 @@ body {
 
 /* Accordion Component */
 .accordion-item {
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
   border-radius: var(--radius-md);
   background: var(--bg-card);
   margin-bottom: 12px;
   overflow: hidden;
+  transition: all var(--transition-normal, 0.25s ease);
+}
+
+.accordion-item:hover,
+.accordion-item.active {
+  border-color: var(--coral-500);
+  box-shadow: var(--shadow-sm);
 }
 
 .accordion-header {
@@ -476,12 +487,29 @@ body {
   font-size: 1rem;
   color: var(--text-primary);
   text-align: start;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color var(--transition-fast, 0.2s ease);
+}
+
+.accordion-header span:last-child {
+  font-size: 0.8rem;
+  color: var(--coral-500);
+  display: inline-block;
+  transition: transform var(--transition-fast, 0.25s ease);
+}
+
+.accordion-item.active .accordion-header span:last-child {
+  transform: rotate(180deg);
 }
 
 .accordion-body {
   padding: 0 20px 20px;
   color: var(--text-muted);
   font-size: 0.95rem;
+  line-height: 1.6;
   display: none;
 }
 
@@ -490,7 +518,7 @@ body {
 }
 
 /* Responsive Styles for Dashboard */
-@media (max-width: 1024px) {
+@media (max-width: 1199px) {
   .app-container {
     grid-template-columns: 1fr;
     width: 100vw;
@@ -679,12 +707,34 @@ body {
   }
 }
 
-/* On tablet view (up to 1024px), expand 3rd card in Attendance and Progress Reports views to full width */
-@media (max-width: 1024px) {
+/* On tablet view (up to 1199px), keep 1st 2 cards in a row and center 3rd card in next row with identical size */
+@media (max-width: 1199px) {
+  #view-attendance .grid-3,
+  #view-reports .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+  }
+
   #view-attendance .grid-3 > *:last-child:nth-child(odd),
   #view-reports .grid-3 > *:last-child:nth-child(odd) {
     grid-column: 1 / -1;
+    justify-self: center !important;
+    width: calc(50% - 10px) !important;
+  }
+}
+
+@media (max-width: 640px) {
+  #view-attendance .grid-3,
+  #view-reports .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #view-attendance .grid-3 > *:last-child:nth-child(odd),
+  #view-reports .grid-3 > *:last-child:nth-child(odd) {
+    grid-column: auto;
     justify-self: stretch !important;
     width: 100% !important;
   }
 }
+

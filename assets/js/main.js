@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initRoutineSimulator();
   initAuthForms();
   initBackToTop();
+  initStatsCounter();
+  initTimelineAnimation();
 });
 
 /* ==========================================================================
@@ -60,9 +62,13 @@ function initThemeSystem() {
 
   document.querySelectorAll('.js-theme-toggle').forEach(btn => {
     btn.addEventListener('click', () => {
+      document.documentElement.classList.add('theme-transitioning');
       const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
       const nextTheme = currentTheme === 'light' ? 'dark' : 'light';
       setTheme(nextTheme);
+      setTimeout(() => {
+        document.documentElement.classList.remove('theme-transitioning');
+      }, 400);
     });
   });
 }
@@ -535,4 +541,86 @@ function initRoutineSimulator() {
       }
     });
   });
+}
+
+/* ==========================================================================
+   10. ANIMATED STATS COUNTER (INCREASES FROM 0)
+   ========================================================================== */
+function initStatsCounter() {
+  const statElements = document.querySelectorAll('.js-stat-counter');
+  if (!statElements.length) return;
+
+  const animateElement = (el) => {
+    if (el.dataset.animated === 'true') return;
+    el.dataset.animated = 'true';
+
+    const target = parseFloat(el.getAttribute('data-target') || '0');
+    const prefix = el.getAttribute('data-prefix') || '';
+    const suffix = el.getAttribute('data-suffix') || '';
+    const isComma = el.getAttribute('data-format') === 'comma';
+    const duration = 1800;
+    const startTime = performance.now();
+
+    const frame = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Smooth ease-out cubic curve
+      const ease = 1 - Math.pow(1 - progress, 3);
+      const currentVal = Math.round(ease * target);
+
+      const formatted = isComma ? currentVal.toLocaleString('en-US') : currentVal;
+      el.textContent = `${prefix}${formatted}${suffix}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(frame);
+      } else {
+        const finalFormatted = isComma ? target.toLocaleString('en-US') : target;
+        el.textContent = `${prefix}${finalFormatted}${suffix}`;
+      }
+    };
+
+    requestAnimationFrame(frame);
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          statElements.forEach(el => animateElement(el));
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+
+    const container = document.getElementById('aboutStatsSection') || statElements[0].closest('section');
+    if (container) {
+      observer.observe(container);
+    } else {
+      statElements.forEach(el => animateElement(el));
+    }
+  } else {
+    statElements.forEach(el => animateElement(el));
+  }
+}
+
+/* ==========================================================================
+   11. INTERACTIVE TIMELINE ANIMATION (CENTER LINE WITH 2 SIDES)
+   ========================================================================== */
+function initTimelineAnimation() {
+  const timelineItems = document.querySelectorAll('[data-timeline-item]');
+  if (!timelineItems.length) return;
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+
+    timelineItems.forEach(item => observer.observe(item));
+  } else {
+    timelineItems.forEach(item => item.classList.add('in-view'));
+  }
 }

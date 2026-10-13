@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTutorNotesFilter();
   initNotificationsSystem();
   initDashboardModals();
+  initDashboardAccordions();
 });
 
 /* ==========================================================================
@@ -343,4 +344,41 @@ function initDashboardModals() {
       }, 50);
     });
   }
+}
+
+/* ==========================================================================
+   08. HELP & SUPPORT FAQ ACCORDION FUNCTIONALITY
+   ========================================================================== */
+function initDashboardAccordions() {
+  document.addEventListener('click', (e) => {
+    const header = e.target.closest('.accordion-header');
+    if (!header) return;
+
+    e.preventDefault();
+    const currentItem = header.closest('.accordion-item');
+    if (!currentItem) return;
+
+    const parent = currentItem.parentElement;
+    const isCurrentlyActive = currentItem.classList.contains('active');
+
+    // Close other FAQ items in the same container for clean accordion UX
+    if (parent) {
+      parent.querySelectorAll('.accordion-item').forEach(item => {
+        if (item !== currentItem) {
+          item.classList.remove('active');
+          const btn = item.querySelector('.accordion-header');
+          if (btn) btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // Toggle current item
+    if (isCurrentlyActive) {
+      currentItem.classList.remove('active');
+      header.setAttribute('aria-expanded', 'false');
+    } else {
+      currentItem.classList.add('active');
+      header.setAttribute('aria-expanded', 'true');
+    }
+  });
 }

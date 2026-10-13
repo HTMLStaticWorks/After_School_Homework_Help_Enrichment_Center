@@ -6,6 +6,14 @@
   <title>Parent Portal Dashboard | BrightPath</title>
   <meta name="description" content="BrightPath Parent Portal Dashboard: Track student homework completion, tutor notes, session schedules, attendance, and progress reports." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('brightpath_theme') || 'light';
+      var dir = localStorage.getItem('brightpath_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/dashboard.css" />
 </head>
 <body>
@@ -15,7 +23,7 @@
     <!-- DASHBOARD SIDEBAR -->
     <aside class="dash-sidebar" id="dashSidebar">
       <a href="index.html" class="sidebar-header" title="Return to Home Page">
-        <div class="logo-icon" style="width:36px; height:36px; background:var(--coral-500); color:var(--navy-900);">
+        <div class="logo-icon" style="width:36px; height:36px;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
             <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
@@ -24,7 +32,6 @@
         </div>
         <div class="logo-text">
           <span class="logo-name" style="color:var(--ivory-100); font-size:1.2rem;">BRIGHTPATH</span>
-          <span class="logo-sub" style="color:var(--coral-500); font-size:0.6rem;">PARENT PORTAL</span>
         </div>
       </a>
 
@@ -690,7 +697,7 @@
               <h3 class="card-title" style="font-size:1.3rem; margin-bottom:20px;">Frequently Asked Questions</h3>
               
               <div class="accordion-item active">
-                <button class="accordion-header">
+                <button class="accordion-header" type="button" aria-expanded="true">
                   <span>How do I reschedule a missed session?</span>
                   <span>▼</span>
                 </button>
@@ -700,7 +707,7 @@
               </div>
 
               <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" type="button" aria-expanded="false">
                   <span>How can I contact Ava's tutor directly?</span>
                   <span>▼</span>
                 </button>
@@ -710,7 +717,7 @@
               </div>
 
               <div class="accordion-item">
-                <button class="accordion-header">
+                <button class="accordion-header" type="button" aria-expanded="false">
                   <span>Where can I view official progress reports?</span>
                   <span>▼</span>
                 </button>

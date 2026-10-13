@@ -6,6 +6,14 @@
   <title>Academic Programs | BrightPath</title>
   <meta name="description" content="Explore BrightPath's after-school academic programs: homework help, grade-level tutoring, subject mastery, and enrichment labs for K-12." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('brightpath_theme') || 'light';
+      var dir = localStorage.getItem('brightpath_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -23,7 +31,6 @@
         </div>
         <div class="logo-text">
           <span class="logo-name">BRIGHTPATH</span>
-          <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
         </div>
       </a>
 
@@ -31,6 +38,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="programs.html" class="nav-link active">Programs</a></li>
           <li><a href="tutors.html" class="nav-link">Tutors</a></li>
           <li><a href="pricing.html" class="nav-link">Pricing</a></li>
@@ -72,7 +80,8 @@
       <ul class="drawer-links">
         <li><a href="index.html" class="drawer-link">Home 1</a></li>
         <li><a href="home2.html" class="drawer-link">Home 2</a></li>
-        <li><a href="programs.html" class="drawer-link">Programs</a></li>
+        <li><a href="about.html" class="drawer-link">About</a></li>
+        <li><a href="programs.html" class="drawer-link active">Programs</a></li>
         <li><a href="tutors.html" class="drawer-link">Tutors</a></li>
         <li><a href="pricing.html" class="drawer-link">Pricing</a></li>
         <li><a href="contact.html" class="drawer-link">Contact</a></li>
@@ -158,26 +167,34 @@
         </div>
 
         <div class="grid-4">
-          <div class="card">
-            <div class="card-icon">➕</div>
+          <div class="card curriculum-card">
+            <div class="curriculum-img-wrap">
+              <img src="assets/images/program-math.png" alt="Mathematics Curriculum Coverage" width="400" height="240" loading="lazy" class="curriculum-img" />
+            </div>
             <h3 class="card-title">Mathematics</h3>
             <p class="card-desc">Arithmetic, Fractions, Pre-Algebra, Algebra I & II, Geometry, Trigonometry, and Calculus prep.</p>
           </div>
 
-          <div class="card">
-            <div class="card-icon">🧪</div>
+          <div class="card curriculum-card">
+            <div class="curriculum-img-wrap">
+              <img src="assets/images/program-science.png" alt="Science and STEM Curriculum Coverage" width="400" height="240" loading="lazy" class="curriculum-img" />
+            </div>
             <h3 class="card-title">Science & STEM</h3>
             <p class="card-desc">Earth Science, Biology, Chemistry, Physics, and hands-on lab report writing support.</p>
           </div>
 
-          <div class="card">
-            <div class="card-icon">📖</div>
+          <div class="card curriculum-card">
+            <div class="curriculum-img-wrap">
+              <img src="assets/images/program-reading.png" alt="Reading and Literacy Curriculum Coverage" width="400" height="240" loading="lazy" class="curriculum-img" />
+            </div>
             <h3 class="card-title">Reading & Literacy</h3>
             <p class="card-desc">Vocabulary expansion, reading fluency, text analysis, and critical comprehension skills.</p>
           </div>
 
-          <div class="card">
-            <div class="card-icon">✍️</div>
+          <div class="card curriculum-card">
+            <div class="curriculum-img-wrap">
+              <img src="assets/images/program-writing.png" alt="Writing and Grammar Curriculum Coverage" width="400" height="240" loading="lazy" class="curriculum-img" />
+            </div>
             <h3 class="card-title">Writing & Grammar</h3>
             <p class="card-desc">Sentence structure, 5-paragraph essay organization, research papers, and creative expression.</p>
           </div>
@@ -242,7 +259,6 @@
             </div>
             <div class="logo-text">
               <span class="logo-name">BRIGHTPATH</span>
-              <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
             </div>
           </a>
           <p>Structured after-school academic support, homework help, tutoring, and enrichment programs designed to build confidence.</p>
@@ -270,6 +286,7 @@
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home 1</a></li>
             <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="programs.html" class="footer-link">Programs</a></li>
             <li><a href="tutors.html" class="footer-link">Our Tutors</a></li>
             <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
@@ -297,7 +314,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 BrightPath After-School Learning Center. All rights reserved.</div>
+        <div>© 2026 BrightPath. All rights reserved.</div>
       </div>
     </div>
   </footer>

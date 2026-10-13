@@ -6,6 +6,14 @@
   <title>BrightPath | Modern Learning Hub (Home 2)</title>
   <meta name="description" content="Discover BrightPath's modern learning hub: structured after-school homework help, subject tutoring, study skills coaching, and enrichment labs." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('brightpath_theme') || 'light';
+      var dir = localStorage.getItem('brightpath_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -23,7 +31,6 @@
         </div>
         <div class="logo-text">
           <span class="logo-name">BRIGHTPATH</span>
-          <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
         </div>
       </a>
 
@@ -31,6 +38,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home2.html" class="nav-link active">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="programs.html" class="nav-link">Programs</a></li>
           <li><a href="tutors.html" class="nav-link">Tutors</a></li>
           <li><a href="pricing.html" class="nav-link">Pricing</a></li>
@@ -71,7 +79,8 @@
       </div>
       <ul class="drawer-links">
         <li><a href="index.html" class="drawer-link">Home 1</a></li>
-        <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="home2.html" class="drawer-link active">Home 2</a></li>
+        <li><a href="about.html" class="drawer-link">About</a></li>
         <li><a href="programs.html" class="drawer-link">Programs</a></li>
         <li><a href="tutors.html" class="drawer-link">Tutors</a></li>
         <li><a href="pricing.html" class="drawer-link">Pricing</a></li>
@@ -95,29 +104,81 @@
   </div>
 
   <main>
-    <!-- HOME 2 SECTION 01 — EDITORIAL FULLSCREEN HERO -->
-    <section class="hero-fullscreen" id="home2Hero">
-      <div class="hero-bg-overlay"></div>
-      <div class="container hero-centered-content">
-        <span class="section-tag hero-tag-dark">Modern Learning Environment</span>
-        <h1 class="hero-fullscreen-title">Transforming After-School Hours Into Lifelong Study Habits.</h1>
-        <p class="hero-fullscreen-lead">An inspiring sanctuary where K-12 students master difficult concepts, complete homework with expert tutors, and build confidence.</p>
-        <div class="hero-btns hero-btns-center">
-          <button class="btn btn-primary js-book-trigger" data-session="Home 2 Hero Consultation">Schedule Center Visit →</button>
-          <a href="tutors.html" class="btn btn-secondary-light">Meet Academic Tutors</a>
+    <!-- HOME 2 SECTION 01 — SPLIT HERO (CONTENT LEFT, IMAGE RIGHT, NO BG IMAGE, IN VIEWPORT) -->
+    <section class="hero-split" id="home2Hero">
+      <div class="container">
+        <div class="hero-split-grid">
+        
+        <!-- Left Column: Concise & Engaging Content (Kept above the fold) -->
+        <div class="hero-split-content">
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-inline-end: 4px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            Modern Learning Academy
+          </span>
+
+          <h1 class="hero-split-title">Turn Homework Stress Into <span class="hero-title-accent">Daily Academic Confidence.</span></h1>
+
+          <p class="hero-split-lead">Personalized 1:4 small-group tutoring and structured after-school routines that help students master core subjects and build independent study habits.</p>
+
+
+          <!-- Action CTAs -->
+          <div class="hero-split-actions">
+            <button type="button" class="btn btn-primary js-book-trigger" data-session="Home 2 Center Tour">Schedule Center Visit →</button>
+            <a href="programs.html" class="btn btn-secondary">Explore Programs</a>
+          </div>
+
+          <!-- Live Metrics Strip -->
+          <div class="hero-split-metrics">
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">15+</span>
+              <span class="hero-metric-label">Subject Tutors</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">K–12</span>
+              <span class="hero-metric-label">Grade Levels</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">+1.4</span>
+              <span class="hero-metric-label">Avg GPA Lift</span>
+            </div>
+            <div class="hero-metric-item">
+              <span class="hero-metric-val">1 : 4</span>
+              <span class="hero-metric-label">Small Group</span>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats-row">
-          <div class="hero-stat-card">
-            <span class="stat-number">100%</span>
-            <span class="stat-label">Homework Completed</span>
+
+        <!-- Right Column: Hero Media & Floating Animated Visual Stickers (Pure Graphics, No Text) -->
+        <div class="hero-split-media">
+          <!-- Ambient Glowing Aura -->
+          <div class="hero-media-aura" aria-hidden="true"></div>
+
+          <!-- Floating Animated Book Sticker (Top Right) -->
+          <div class="hero-visual-sticker sticker-book-top" title="Interactive Reading & STEM Labs" aria-hidden="true">
+            <span class="sticker-sparkle sticker-sparkle-1">✨</span>
+            <span class="sticker-icon animated-book-icon">📚</span>
+            <span class="sticker-sparkle sticker-sparkle-2">✦</span>
           </div>
-          <div class="hero-stat-card">
-            <span class="stat-number">4.9 / 5</span>
-            <span class="stat-label">Average Parent Rating</span>
+
+          <!-- Floating Graduation Cap Sticker (Top Left) -->
+          <div class="hero-visual-sticker sticker-grad-left" title="Academic Excellence" aria-hidden="true">
+            <span class="sticker-icon animated-grad-icon">🎓</span>
           </div>
-          <div class="hero-stat-card">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Expert Subject Tutors</span>
+
+          <!-- Main Classroom Media Frame -->
+          <div class="hero-split-image-wrapper">
+            <img src="assets/images/classroom-learning.png" alt="Students learning in BrightPath interactive after-school classroom" width="600" height="380" />
+          </div>
+          
+          <!-- Floating Glowing Star Sticker (Bottom Left) -->
+          <div class="hero-visual-sticker sticker-star-bottom-left" title="Top Rated 4.9/5 Center" aria-hidden="true">
+            <span class="sticker-icon animated-star-icon">⭐</span>
+          </div>
+
+          <!-- Floating Open Book & Sparkle Sticker (Bottom Right) -->
+          <div class="hero-visual-sticker sticker-book-bottom-right" title="100% Homework Mastery" aria-hidden="true">
+            <span class="sticker-icon animated-openbook-icon">📖</span>
+            <span class="sticker-sparkle sticker-sparkle-3">✨</span>
           </div>
         </div>
       </div>
@@ -186,8 +247,110 @@
       </div>
     </section>
 
+    <!-- HOME 2 SECTION: THE AFTERNOON ROUTINE (Content Left, Interactive Schedule Flow, Unique Visual Right) -->
+    <section class="section" style="background: var(--bg-secondary);" id="afternoonRoutineSection">
+      <div class="container">
+        <div class="routine-split-grid">
+          <!-- Left Column: Content & 4-Stage Timeline Cards -->
+          <div>
+            <span class="section-tag" style="margin-bottom: 8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-inline-end: 4px;"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              Predictable Daily Success
+            </span>
+            <h2 class="section-title" style="margin-bottom: 8px;">The Afternoon Homework Rhythm.</h2>
+            <p class="section-subtitle" style="margin-bottom: 14px;">Structured after-school coaching engineered to eliminate evening tears, verify assignments, and build independence.</p>
+
+            <div class="routine-steps-list">
+              <!-- Step 1 -->
+              <div class="routine-step-card">
+                <div class="routine-step-badge">01</div>
+                <div class="routine-step-info">
+                  <div class="routine-step-header">
+                    <h3 class="routine-step-title">Arrival, Snack & Decompression</h3>
+                    <span class="routine-step-time">3:30 PM</span>
+                  </div>
+                  <p class="routine-step-desc">Unpack binders, enjoy healthy brain-fuel snacks, and transition into focused study mode.</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="routine-step-card">
+                <div class="routine-step-badge badge-navy">02</div>
+                <div class="routine-step-info">
+                  <div class="routine-step-header">
+                    <h3 class="routine-step-title">Assignment Triage & Goal-Setting</h3>
+                    <span class="routine-step-time">3:45 PM</span>
+                  </div>
+                  <p class="routine-step-desc">Review Google Classroom agendas and prioritize urgent homework goals with advisors.</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="routine-step-card">
+                <div class="routine-step-badge">03</div>
+                <div class="routine-step-info">
+                  <div class="routine-step-header">
+                    <h3 class="routine-step-title">1:4 Guided Subject Coaching</h3>
+                    <span class="routine-step-time">4:00 PM</span>
+                  </div>
+                  <p class="routine-step-desc">Focused completion with instant tutor guidance before academic frustration sets in.</p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="routine-step-card">
+                <div class="routine-step-badge badge-navy">04</div>
+                <div class="routine-step-info">
+                  <div class="routine-step-header">
+                    <h3 class="routine-step-title">Tutor Sign-Off & Parent Sync</h3>
+                    <span class="routine-step-time">5:15 PM</span>
+                  </div>
+                  <p class="routine-step-desc">Every problem set is verified for accuracy and celebratory notes sync to the portal.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary js-book-trigger" data-session="After-School Routine Tour">Schedule Center Tour →</button>
+              <a href="programs.html" class="btn btn-secondary">Explore Programs</a>
+            </div>
+          </div>
+
+          <!-- Right Column: Featured Image with Floating Glass Cards -->
+          <div class="routine-media-wrap">
+            <!-- Floating Card Top -->
+            <div class="floating-glass-card card-top-float">
+              <div class="floating-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              </div>
+              <div>
+                <div class="floating-glass-title">100% Homework Verified</div>
+                <div class="floating-glass-sub">Signed off before parent pickup</div>
+              </div>
+            </div>
+
+            <!-- Main Photographic Frame -->
+            <div class="routine-image-frame">
+              <img src="assets/images/afternoon-routine.jpg" alt="Dedicated BrightPath mentor guiding small group students through after-school assignments" width="600" height="500" loading="lazy" />
+            </div>
+
+            <!-- Floating Card Bottom -->
+            <div class="floating-glass-card card-bottom-float">
+              <div class="floating-icon-circle icon-navy">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <div class="floating-glass-title">Zero Evening Battles</div>
+                <div class="floating-glass-sub">Peaceful dinner tables & family time restored</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HOME 2 SECTION 04 — VIRTUAL & IN-PERSON LEARNING HUB -->
-    <section class="section" style="background: var(--bg-secondary);" id="learningHubSection">
+    <section class="section" id="learningHubSection">
       <div class="container">
         <div style="text-align: center; margin-bottom: 40px;">
           <span class="section-tag">Flexible Learning Modes</span>
@@ -224,6 +387,81 @@
       </div>
     </section>
 
+    <!-- HOME 2 SECTION: ENRICHMENT & STEM INNOVATION LABS (Unique Visual Left, 2x2 Feature Matrix Right) -->
+    <section class="section section-dark" id="enrichmentLabsSection">
+      <div class="container">
+        <div class="labs-split-grid">
+          <!-- Left Column: Visual Showcase with Glowing Aura & Overlaid Banner -->
+          <div class="labs-media-wrap">
+            <div class="labs-media-aura" aria-hidden="true"></div>
+            <div class="labs-image-frame">
+              <img src="assets/images/stem-innovation-lab.jpg" alt="Young students collaborating enthusiastically on robotics and engineering circuitry models in BrightPath STEM workshop" width="600" height="500" loading="lazy" />
+              <div class="labs-banner-overlay">
+                <span class="labs-banner-pill">Hands-On Discovery</span>
+                <p class="labs-banner-text">Included daily exploration once assignments are complete.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Narrative & 2x2 Lab Feature Matrix -->
+          <div>
+            <span class="section-tag" style="background: rgba(229, 107, 93, 0.2); color: var(--coral-500); margin-bottom: 8px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-inline-end: 4px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Beyond The Textbook
+            </span>
+            <h2 class="section-title" style="color: var(--ivory-100); margin-bottom: 8px;">STEM & Hands-On Enrichment Labs.</h2>
+            <p class="section-subtitle" style="color: var(--slate-400); margin-bottom: 14px;">Once homework is finished, students explore tactile maker labs that spark lifelong curiosity and creative problem-solving.</p>
+
+            <div class="labs-grid-2x2">
+              <!-- Lab 1 -->
+              <div class="lab-item-card">
+                <div class="lab-item-top">
+                  <div class="lab-item-icon">🤖</div>
+                  <span class="lab-item-tag">Robotics & Code</span>
+                </div>
+                <h3 class="lab-item-title">Robotics & Coding</h3>
+                <p class="lab-item-desc">Micro-controllers, gear systems, and visual block logic that bring STEM alive.</p>
+              </div>
+
+              <!-- Lab 2 -->
+              <div class="lab-item-card">
+                <div class="lab-item-top">
+                  <div class="lab-item-icon">✍️</div>
+                  <span class="lab-item-tag">Young Authors</span>
+                </div>
+                <h3 class="lab-item-title">Creative Storytelling</h3>
+                <p class="lab-item-desc">Story creation, comic illustration, and voice exercises for young writers.</p>
+              </div>
+
+              <!-- Lab 3 -->
+              <div class="lab-item-card">
+                <div class="lab-item-top">
+                  <div class="lab-item-icon">🔬</div>
+                  <span class="lab-item-tag">Hands-On Science</span>
+                </div>
+                <h3 class="lab-item-title">Science Discovery</h3>
+                <p class="lab-item-desc">Physics marble runs, optics prisms, and tactile modules answering real curiosity.</p>
+              </div>
+
+              <!-- Lab 4 -->
+              <div class="lab-item-card">
+                <div class="lab-item-top">
+                  <div class="lab-item-icon">♟️</div>
+                  <span class="lab-item-tag">Strategy & Focus</span>
+                </div>
+                <h3 class="lab-item-title">Chess & Logic Puzzles</h3>
+                <p class="lab-item-desc">Spatial reasoning, multi-move foresight, and tactical gameplay challenges.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap;">
+              <button type="button" class="btn btn-primary js-book-trigger" data-session="Enrichment Lab Trial">Book Free Lab Session →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- HOME 2 SECTION 05 — PARENT TESTIMONIALS & SUCCESS STORIES -->
     <section class="section" id="testimonialsSection">
       <div class="container">
@@ -233,39 +471,45 @@
           <p class="section-subtitle" style="margin-inline: auto;">Hear how our after-school center has impacted family routines and student confidence.</p>
         </div>
 
-        <div class="grid-3">
-          <div class="card">
-            <div style="color:#F59E0B; font-size:1.2rem; margin-bottom:12px;">★★★★★</div>
-            <p style="font-style:italic; font-size:0.95rem; margin-bottom:20px;">"BrightPath completely eliminated our nightly math homework battles! Ava now finishes her assignments at the center and comes home relaxed."</p>
-            <div style="display:flex; align-items:center; gap:12px;">
-              <img src="assets/images/4.png" alt="Sarah Morgan" style="width:40px; height:40px; border-radius:50%; object-fit:cover;" />
+        <div class="grid-3" style="align-items: stretch;">
+          <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="color: #F59E0B; font-size: 1.15rem; margin-bottom: 14px; letter-spacing: 2px;">★★★★★</div>
+            <p style="font-style: italic; font-size: 0.96rem; line-height: 1.65; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+              "BrightPath completely eliminated our nightly math homework battles! Ava now finishes her assignments at the center and comes home relaxed."
+            </p>
+            <div style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color);">
+              <img src="assets/images/parent-sarah.jpg" alt="Sarah Morgan" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);" />
               <div>
-                <div style="font-weight:700; font-size:0.9rem;">Sarah Morgan</div>
-                <div style="font-size:0.75rem; color:var(--text-muted);">Parent of 6th Grader</div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 2px;">Sarah Morgan</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Parent of 6th Grader</div>
               </div>
             </div>
           </div>
 
-          <div class="card">
-            <div style="color:#F59E0B; font-size:1.2rem; margin-bottom:12px;">★★★★★</div>
-            <p style="font-style:italic; font-size:0.95rem; margin-bottom:20px;">"The tutor notes on the parent portal are amazing. I can see exactly what my son worked on with Daniel every Wednesday."</p>
-            <div style="display:flex; align-items:center; gap:12px;">
-              <div style="width:40px; height:40px; background:var(--navy-900); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">MK</div>
+          <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="color: #F59E0B; font-size: 1.15rem; margin-bottom: 14px; letter-spacing: 2px;">★★★★★</div>
+            <p style="font-style: italic; font-size: 0.96rem; line-height: 1.65; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+              "The tutor notes on the parent portal are amazing. I can see exactly what my son worked on with Daniel every Wednesday."
+            </p>
+            <div style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color);">
+              <img src="assets/images/parent-marcus.jpg" alt="Marcus Kelly" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);" />
               <div>
-                <div style="font-weight:700; font-size:0.9rem;">Marcus Kelly</div>
-                <div style="font-size:0.75rem; color:var(--text-muted);">Parent of 8th Grader</div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 2px;">Marcus Kelly</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Parent of 8th Grader</div>
               </div>
             </div>
           </div>
 
-          <div class="card">
-            <div style="color:#F59E0B; font-size:1.2rem; margin-bottom:12px;">★★★★★</div>
-            <p style="font-style:italic; font-size:0.95rem; margin-bottom:20px;">"Our daughter gained so much confidence in Science thanks to Priya. Her report card grade improved from B- to A in one term."</p>
-            <div style="display:flex; align-items:center; gap:12px;">
-              <div style="width:40px; height:40px; background:var(--coral-500); color:white; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:bold;">EL</div>
+          <div class="card" style="display: flex; flex-direction: column; height: 100%;">
+            <div style="color: #F59E0B; font-size: 1.15rem; margin-bottom: 14px; letter-spacing: 2px;">★★★★★</div>
+            <p style="font-style: italic; font-size: 0.96rem; line-height: 1.65; color: var(--text-primary); margin-bottom: 24px; flex-grow: 1;">
+              "Our daughter gained so much confidence in Science thanks to Priya. Her report card grade improved from B- to A in one term."
+            </p>
+            <div style="display: flex; align-items: center; gap: 14px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--border-color);">
+              <img src="assets/images/parent-elena.png" alt="Elena Rodriguez" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; object-position: center top; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.12);" />
               <div>
-                <div style="font-weight:700; font-size:0.9rem;">Elena Rodriguez</div>
-                <div style="font-size:0.75rem; color:var(--text-muted);">Parent of 10th Grader</div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--text-primary); margin-bottom: 2px;">Elena Rodriguez</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Parent of 10th Grader</div>
               </div>
             </div>
           </div>
@@ -279,9 +523,9 @@
         <span class="section-tag" style="background:rgba(229,107,93,0.2);">Schedule Your Visit</span>
         <h2 class="section-title" style="color:var(--ivory-100); max-width:720px; margin-inline:auto;">Ready To Experience The BrightPath Difference?</h2>
         <p class="section-subtitle" style="color:var(--slate-400); margin-inline:auto; margin-bottom:36px;">Book a free academic consultation and center tour with one of our lead advisors.</p>
-        <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+        <div class="cta-actions-group">
           <button class="btn btn-primary js-book-trigger" data-session="Home 2 Final Consultation">Book Consultation Session →</button>
-          <a href="pricing.html" class="btn btn-secondary" style="border-color:rgba(245,241,232,0.3); color:var(--ivory-100);">View Sample Pricing</a>
+          <a href="pricing.html" class="btn btn-secondary-light">View Sample Pricing</a>
         </div>
       </div>
     </section>
@@ -302,7 +546,6 @@
             </div>
             <div class="logo-text">
               <span class="logo-name">BRIGHTPATH</span>
-              <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
             </div>
           </a>
           <p>Structured after-school academic support, homework help, tutoring, and enrichment programs designed to build confidence.</p>
@@ -330,6 +573,7 @@
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home 1</a></li>
             <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="programs.html" class="footer-link">Programs</a></li>
             <li><a href="tutors.html" class="footer-link">Our Tutors</a></li>
             <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
@@ -357,7 +601,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 BrightPath After-School Learning Center. All rights reserved.</div>
+        <div>© 2026 BrightPath. All rights reserved.</div>
       </div>
     </div>
   </footer>

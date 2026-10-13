@@ -3,9 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us | BrightPath After-School Center</title>
-  <meta name="description" content="Get in touch with BrightPath After-School Learning Center. Center address, phone, email, enquiry form, social links, and Google Map location." />
+  <title>Contact Us | BrightPath</title>
+  <meta name="description" content="Get in touch with BrightPath. Center address, phone, email, enquiry form, social links, and Google Map location." />
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <script>
+    (function() {
+      var theme = localStorage.getItem('brightpath_theme') || 'light';
+      var dir = localStorage.getItem('brightpath_dir') || 'ltr';
+      document.documentElement.setAttribute('data-theme', theme);
+      document.documentElement.setAttribute('dir', dir);
+    })();
+  </script>
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -23,7 +31,6 @@
         </div>
         <div class="logo-text">
           <span class="logo-name">BRIGHTPATH</span>
-          <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
         </div>
       </a>
 
@@ -31,6 +38,7 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home 1</a></li>
           <li><a href="home2.html" class="nav-link">Home 2</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="programs.html" class="nav-link">Programs</a></li>
           <li><a href="tutors.html" class="nav-link">Tutors</a></li>
           <li><a href="pricing.html" class="nav-link">Pricing</a></li>
@@ -72,6 +80,7 @@
       <ul class="drawer-links">
         <li><a href="index.html" class="drawer-link">Home 1</a></li>
         <li><a href="home2.html" class="drawer-link">Home 2</a></li>
+        <li><a href="about.html" class="drawer-link">About</a></li>
         <li><a href="programs.html" class="drawer-link">Programs</a></li>
         <li><a href="tutors.html" class="drawer-link">Tutors</a></li>
         <li><a href="pricing.html" class="drawer-link">Pricing</a></li>
@@ -266,7 +275,6 @@
             </div>
             <div class="logo-text">
               <span class="logo-name">BRIGHTPATH</span>
-              <span class="logo-sub">AFTER-SCHOOL LEARNING</span>
             </div>
           </a>
           <p>Structured after-school academic support, homework help, tutoring, and enrichment programs designed to build confidence.</p>
@@ -294,6 +302,7 @@
           <ul class="footer-links">
             <li><a href="index.html" class="footer-link">Home 1</a></li>
             <li><a href="home2.html" class="footer-link">Home 2</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
             <li><a href="programs.html" class="footer-link">Programs</a></li>
             <li><a href="tutors.html" class="footer-link">Our Tutors</a></li>
             <li><a href="pricing.html" class="footer-link">Pricing Plans</a></li>
@@ -321,7 +330,7 @@
       </div>
 
       <div class="footer-bottom">
-        <div>© 2026 BrightPath After-School Learning Center. All rights reserved.</div>
+        <div>© 2026 BrightPath. All rights reserved.</div>
       </div>
     </div>
   </footer>
